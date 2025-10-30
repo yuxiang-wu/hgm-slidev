@@ -1,6 +1,5 @@
 ---
 theme: default
-background: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -15,32 +14,30 @@ mdc: true
 colorSchema: auto
 ---
 
-# Huxley-Gödel Machine
+<div class="grid grid-cols-2 gap-16 h-full items-center px-16">
 
-<div class="text-xl opacity-90 mt-4 leading-relaxed max-w-4xl mx-auto">
+<div class="text-left space-y-8">
+
+<div>
+<div class="text-5xl font-bold leading-tight">
+Huxley-Gödel Machine
+</div>
+
+<div class="text-2xl opacity-80 mt-8 leading-relaxed">
 Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine
 </div>
-
-<div class="pt-16">
-  <div class="text-sm opacity-70">
-    Wenyi Wang, Piotr Piekos, Li Nanbo, Firas Laakom, Yimeng Chen,<br/>
-    Mateusz Ostaszewski, Mingchen Zhuge, Jürgen Schmidhuber
-  </div>
-  <div class="text-sm opacity-60 mt-4">
-    King Abdullah University of Science and Technology (KAUST)
-  </div>
 </div>
 
-<div class="abs-br m-6 flex gap-2">
-  <span class="text-xs opacity-50">2025</span>
+<div class="text-base opacity-50">
+KAUST, 2025
 </div>
 
----
+</div>
 
-# The Vision: Self-Improving AI
+<div class="flex items-center justify-center">
+<img src="https://cdn-mineru.openxlab.org.cn/result/2025-10-28/3e6a2f5a-ddaa-453c-b051-31d5208470cf/6feaf1d9e53c1c0b364add8f608c0e2146ad0f3d1d6585916022a6dceb07d167.jpg" class="max-h-[480px] rounded-lg shadow-2xl" />
+</div>
 
-<div class="flex items-center justify-center h-full">
-<img src="https://cdn-mineru.openxlab.org.cn/result/2025-10-28/3e6a2f5a-ddaa-453c-b051-31d5208470cf/6feaf1d9e53c1c0b364add8f608c0e2146ad0f3d1d6585916022a6dceb07d167.jpg" class="max-h-96 rounded-lg shadow-xl" />
 </div>
 
 ---
@@ -413,35 +410,39 @@ Expand or evaluate?
 
 # Experimental Setup
 
-<div class="grid grid-cols-3 gap-8 mt-12 text-center">
+<div class="flex items-center justify-center h-full">
+
+<div class="grid grid-cols-3 gap-12 text-center max-w-5xl">
 
 <div>
-<div class="text-4xl mb-4">📊</div>
-<div class="text-xl font-bold mb-2">Benchmarks</div>
-<div>
-• SWE-bench Verified (500)<br/>
-• SWE-bench Lite (300)<br/>
-• Polyglot
-</div>
-</div>
-
-<div>
-<div class="text-4xl mb-4">🤖</div>
-<div class="text-xl font-bold mb-2">Baselines</div>
-<div>
-• DGM<br/>
-• SICA<br/>
-• SWE-agent
+<div class="text-5xl mb-4">📊</div>
+<div class="text-xl font-bold mb-3">Benchmarks</div>
+<div class="text-base">
+SWE-bench Verified (500)<br/>
+SWE-bench Lite (300)<br/>
+Polyglot
 </div>
 </div>
 
 <div>
-<div class="text-4xl mb-4">🧠</div>
-<div class="text-xl font-bold mb-2">Models</div>
-<div>
-• GPT-5 / GPT-5-mini<br/>
-• Qwen3-Coder
+<div class="text-5xl mb-4">🤖</div>
+<div class="text-xl font-bold mb-3">Baselines</div>
+<div class="text-base">
+DGM<br/>
+SICA<br/>
+SWE-agent
 </div>
+</div>
+
+<div>
+<div class="text-5xl mb-4">🧠</div>
+<div class="text-xl font-bold mb-3">Models</div>
+<div class="text-base">
+GPT-5 / GPT-5-mini<br/>
+Qwen3-Coder
+</div>
+</div>
+
 </div>
 
 </div>
@@ -639,42 +640,42 @@ Multiple levels of changes
 
 # Key Contributions
 
-<div class="grid grid-cols-2 gap-10 mt-10">
+<div class="grid grid-cols-2 gap-8 mt-6">
 
-<div class="space-y-6">
+<div class="space-y-4">
 
-<div class="bg-blue-50 dark:bg-blue-900 p-6 rounded-xl shadow-md border-l-4 border-blue-500">
-<div class="text-3xl mb-2">🔍</div>
-<div class="text-lg"><strong>Identified</strong> Metaproductivity-Performance Mismatch</div>
+<div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-xl shadow-md border-l-4 border-blue-500">
+<div class="text-2xl mb-1">🔍</div>
+<div class="text-base"><strong>Identified</strong> Metaproductivity-Performance Mismatch</div>
 </div>
 
-<div class="bg-green-50 dark:bg-green-900 p-6 rounded-xl shadow-md border-l-4 border-green-500">
-<div class="text-3xl mb-2">🌿</div>
-<div class="text-lg"><strong>Introduced</strong> Clade-Metaproductivity (CMP)</div>
+<div class="bg-green-50 dark:bg-green-900 p-4 rounded-xl shadow-md border-l-4 border-green-500">
+<div class="text-2xl mb-1">🌿</div>
+<div class="text-base"><strong>Introduced</strong> Clade-Metaproductivity (CMP)</div>
 </div>
 
-<div class="bg-purple-50 dark:bg-purple-900 p-6 rounded-xl shadow-md border-l-4 border-purple-500">
-<div class="text-3xl mb-2">🧮</div>
-<div class="text-lg"><strong>Proved</strong> Theorem 1 (CMP = Gödel Machine)</div>
+<div class="bg-purple-50 dark:bg-purple-900 p-4 rounded-xl shadow-md border-l-4 border-purple-500">
+<div class="text-2xl mb-1">🧮</div>
+<div class="text-base"><strong>Proved</strong> Theorem 1 (CMP = Gödel Machine)</div>
 </div>
 
 </div>
 
-<div class="space-y-6">
+<div class="space-y-4">
 
-<div class="bg-orange-50 dark:bg-orange-900 p-6 rounded-xl shadow-md border-l-4 border-orange-500">
-<div class="text-3xl mb-2">⚡</div>
-<div class="text-lg"><strong>Developed</strong> HGM Algorithm</div>
+<div class="bg-orange-50 dark:bg-orange-900 p-4 rounded-xl shadow-md border-l-4 border-orange-500">
+<div class="text-2xl mb-1">⚡</div>
+<div class="text-base"><strong>Developed</strong> HGM Algorithm</div>
 </div>
 
-<div class="bg-yellow-50 dark:bg-yellow-900 p-6 rounded-xl shadow-md border-l-4 border-yellow-500">
-<div class="text-3xl mb-2">📊</div>
-<div class="text-lg"><strong>Validated</strong> 2-3× better CMP estimation</div>
+<div class="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-xl shadow-md border-l-4 border-yellow-500">
+<div class="text-2xl mb-1">📊</div>
+<div class="text-base"><strong>Validated</strong> 2-3× better CMP estimation</div>
 </div>
 
-<div class="bg-red-50 dark:bg-red-900 p-6 rounded-xl shadow-md border-l-4 border-red-500">
-<div class="text-3xl mb-2">🏆</div>
-<div class="text-lg"><strong>Achieved</strong> Human-level performance</div>
+<div class="bg-red-50 dark:bg-red-900 p-4 rounded-xl shadow-md border-l-4 border-red-500">
+<div class="text-2xl mb-1">🏆</div>
+<div class="text-base"><strong>Achieved</strong> Human-level performance</div>
 </div>
 
 </div>
@@ -710,58 +711,34 @@ Multiple levels of changes
 
 # Key Takeaways
 
-<div class="flex flex-col items-center justify-center h-full gap-10">
+<div class="flex flex-col items-center justify-center h-full gap-6">
 
-<div class="grid grid-cols-2 gap-10 text-xl max-w-6xl">
+<div class="grid grid-cols-2 gap-6 max-w-5xl">
 
-<div class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900 dark:to-red-800 p-8 rounded-xl shadow-lg border-2 border-red-200 dark:border-red-700">
-<div class="text-4xl mb-3">❌</div>
-<div class="text-xl font-bold">Performance ≠ Metaproductivity</div>
+<div class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900 dark:to-red-800 p-5 rounded-xl shadow-lg border-2 border-red-200 dark:border-red-700">
+<div class="text-3xl mb-2">❌</div>
+<div class="text-lg font-bold">Performance ≠ Metaproductivity</div>
 </div>
 
-<div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 p-8 rounded-xl shadow-lg border-2 border-green-200 dark:border-green-700">
-<div class="text-4xl mb-3">✅</div>
-<div class="text-xl font-bold">Lineages > Individuals</div>
+<div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 p-5 rounded-xl shadow-lg border-2 border-green-200 dark:border-green-700">
+<div class="text-3xl mb-2">✅</div>
+<div class="text-lg font-bold">Lineages > Individuals</div>
 </div>
 
-<div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-8 rounded-xl shadow-lg border-2 border-blue-200 dark:border-blue-700">
-<div class="text-4xl mb-3">🧮</div>
-<div class="text-xl font-bold">CMP Oracle = Gödel Machine</div>
+<div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-5 rounded-xl shadow-lg border-2 border-blue-200 dark:border-blue-700">
+<div class="text-3xl mb-2">🧮</div>
+<div class="text-lg font-bold">CMP Oracle = Gödel Machine</div>
 </div>
 
-<div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 p-8 rounded-xl shadow-lg border-2 border-purple-200 dark:border-purple-700">
-<div class="text-4xl mb-3">🏆</div>
-<div class="text-xl font-bold">Human-Level Performance</div>
+<div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 p-5 rounded-xl shadow-lg border-2 border-purple-200 dark:border-purple-700">
+<div class="text-3xl mb-2">🏆</div>
+<div class="text-lg font-bold">Human-Level Performance</div>
 </div>
 
 </div>
 
-<div class="text-2xl text-center bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900 dark:to-orange-900 p-8 rounded-xl shadow-xl max-w-5xl border-2 border-yellow-300 dark:border-yellow-700">
+<div class="text-xl text-center bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900 dark:to-orange-900 p-6 rounded-xl shadow-xl max-w-4xl border-2 border-yellow-300 dark:border-yellow-700">
 💡 <strong>Paradigm Shift:</strong> Focus on capacity to <strong>keep improving</strong>
 </div>
 
-</div>
-
----
-layout: center
-class: text-center
----
-
-# Thank You!
-
-<div class="mt-12">
-
-## Questions?
-
-<br>
-
-<div class="text-sm opacity-70">
-Paper: arxiv.org/abs/[TBD]<br>
-Code: github.com/metauto-ai/HGM
-</div>
-
-</div>
-
-<div class="abs-br m-6 text-sm opacity-50">
-Huxley-Gödel Machine - KAUST 2025
 </div>
