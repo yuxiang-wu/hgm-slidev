@@ -35,7 +35,7 @@ KAUST, 2025
 </div>
 
 <div class="flex items-center justify-center">
-<img src="https://cdn-mineru.openxlab.org.cn/result/2025-10-28/3e6a2f5a-ddaa-453c-b051-31d5208470cf/6feaf1d9e53c1c0b364add8f608c0e2146ad0f3d1d6585916022a6dceb07d167.jpg" class="max-h-[480px] rounded-lg shadow-2xl" />
+<img src="/images/title-figure.jpg" class="max-h-[480px] rounded-lg shadow-2xl" />
 </div>
 
 </div>
@@ -454,7 +454,7 @@ layout: center
 # Main Results from Paper
 
 <div class="flex items-center justify-center">
-<img src="https://cdn-mineru.openxlab.org.cn/result/2025-10-28/3e6a2f5a-ddaa-453c-b051-31d5208470cf/7ec4ab03ffa407e7b7480ae0168562ae07eaa117ab8f01c52a6d71fab3f6d2dd.jpg" class="max-w-full max-h-[500px] rounded-lg shadow-2xl" />
+<img src="/images/figure1-main-results.jpg" class="max-w-full max-h-[500px] rounded-lg shadow-2xl" />
 </div>
 
 ---
