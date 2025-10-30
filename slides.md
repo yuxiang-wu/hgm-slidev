@@ -1,9 +1,9 @@
 ---
 theme: default
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072
 class: text-center
 highlighter: shiki
-lineNumbers: true
+lineNumbers: false
 info: |
   ## Huxley-Gödel Machine
   Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine
@@ -12,21 +12,27 @@ drawings:
 transition: slide-left
 title: Huxley-Gödel Machine
 mdc: true
+colorSchema: auto
 ---
 
 # Huxley-Gödel Machine
 
-**Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine**
+<div class="text-xl opacity-90 mt-4 leading-relaxed max-w-4xl mx-auto">
+Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine
+</div>
 
-<div class="pt-12">
-  <span class="text-sm">
-    Wenyi Wang, Piotr Piekos, Li Nanbo, Firas Laakom, Yimeng Chen,
+<div class="pt-16">
+  <div class="text-sm opacity-70">
+    Wenyi Wang, Piotr Piekos, Li Nanbo, Firas Laakom, Yimeng Chen,<br/>
     Mateusz Ostaszewski, Mingchen Zhuge, Jürgen Schmidhuber
-  </span>
+  </div>
+  <div class="text-sm opacity-60 mt-4">
+    King Abdullah University of Science and Technology (KAUST)
+  </div>
 </div>
 
 <div class="abs-br m-6 flex gap-2">
-  <span class="text-sm opacity-50">KAUST, 2025</span>
+  <span class="text-xs opacity-50">2025</span>
 </div>
 
 ---
@@ -41,26 +47,28 @@ mdc: true
 
 # The Challenge
 
-<div class="grid grid-cols-2 gap-12 mt-12">
+<div class="grid grid-cols-2 gap-16 mt-16">
 
-<div class="text-center">
-
-## 🎯 Goal
-
-**Which self-modifications to accept?**
-
+<div class="flex flex-col items-center justify-center">
+<div class="text-6xl mb-6">🎯</div>
+<div class="text-2xl font-bold mb-4">Central Question</div>
+<div class="text-xl text-center">
+Which self-modifications<br/>should we accept?
+</div>
 </div>
 
-<div>
+<div class="space-y-8">
 
-## ❌ Prior Approach
+<div class="bg-red-50 dark:bg-red-900 p-6 rounded-lg">
+<div class="text-xl font-bold mb-2">❌ Prior Approach</div>
+<div>DGM & SICA use benchmark scores</div>
+<div class="text-sm opacity-70 mt-2">Assume: High score → Better lineage</div>
+</div>
 
-- DGM & SICA use **benchmark scores**
-- Assume: High score → Better lineage
-
-## ⚠️ The Problem
-
-**High scores ≠ Good descendants**
+<div class="bg-orange-50 dark:bg-orange-900 p-6 rounded-lg">
+<div class="text-xl font-bold mb-2">⚠️ The Problem</div>
+<div class="text-lg">High scores ≠ Good descendants</div>
+</div>
 
 </div>
 
@@ -193,6 +201,8 @@ graph TD
 </v-click>
 </div>
 
+---
+
 # Clade-Metaproductivity (CMP)
 
 <div class="grid grid-cols-2 gap-12 items-center">
@@ -292,33 +302,38 @@ graph TD
 
 # HGM: How to Estimate CMP?
 
-<div class="flex flex-col items-center justify-center h-full gap-8">
+<div class="flex flex-col items-center justify-center h-full gap-10">
 
-<div class="text-2xl text-center">
+<div class="text-2xl text-center max-w-3xl">
 Aggregate success across <strong>entire clade</strong> (lineage)
 </div>
 
-<div class="text-4xl text-center bg-blue-50 dark:bg-blue-900 p-6 rounded-lg">
+<div class="bg-blue-50 dark:bg-blue-900 p-8 rounded-xl shadow-lg">
+<div class="text-3xl text-center">
 
 $$\widehat{\text{CMP}}(a) = \frac{\text{successes in clade}}{\text{total tests in clade}}$$
 
 </div>
+</div>
 
-<div class="grid grid-cols-3 gap-8 mt-8">
+<div class="grid grid-cols-3 gap-10 mt-4">
 
 <div class="text-center">
-<div class="text-4xl mb-2">📊</div>
-<div class="text-lg">Clade-level<br/>aggregation</div>
+<div class="text-5xl mb-3">📊</div>
+<div class="text-lg font-semibold">Clade-level</div>
+<div class="text-sm opacity-70">aggregation</div>
 </div>
 
 <div class="text-center">
-<div class="text-4xl mb-2">⚖️</div>
-<div class="text-lg">Weighted by<br/>evaluations</div>
+<div class="text-5xl mb-3">⚖️</div>
+<div class="text-lg font-semibold">Weighted by</div>
+<div class="text-sm opacity-70">evaluations</div>
 </div>
 
 <div class="text-center">
-<div class="text-4xl mb-2">🎲</div>
-<div class="text-lg">Thompson<br/>Sampling</div>
+<div class="text-5xl mb-3">🎲</div>
+<div class="text-lg font-semibold">Thompson</div>
+<div class="text-sm opacity-70">Sampling</div>
 </div>
 
 </div>
@@ -329,44 +344,44 @@ $$\widehat{\text{CMP}}(a) = \frac{\text{successes in clade}}{\text{total tests i
 
 # HGM: Three Adaptive Policies
 
-<div class="grid grid-cols-3 gap-6 mt-12">
+<div class="grid grid-cols-3 gap-8 mt-10">
 
-<div class="border-2 border-blue-300 dark:border-blue-700 rounded-lg p-6">
-<div class="text-center text-4xl mb-4">🔧</div>
-<div class="text-center text-xl font-bold mb-4">Expansion</div>
-<div class="text-center text-lg">
+<div class="bg-blue-50 dark:bg-blue-900 border-2 border-blue-400 dark:border-blue-600 rounded-xl p-8 shadow-lg">
+<div class="text-center text-5xl mb-4">🔧</div>
+<div class="text-center text-2xl font-bold mb-4">Expansion</div>
+<div class="text-center opacity-80 mb-4">
 Which agent to modify?
 </div>
-<div class="mt-4 text-center">
-→ Use <strong>clade CMP</strong>
+<div class="text-center text-lg bg-blue-100 dark:bg-blue-800 p-3 rounded">
+Use <strong>clade CMP</strong>
 </div>
 </div>
 
-<div class="border-2 border-green-300 dark:border-green-700 rounded-lg p-6">
-<div class="text-center text-4xl mb-4">📊</div>
-<div class="text-center text-xl font-bold mb-4">Evaluation</div>
-<div class="text-center text-lg">
+<div class="bg-green-50 dark:bg-green-900 border-2 border-green-400 dark:border-green-600 rounded-xl p-8 shadow-lg">
+<div class="text-center text-5xl mb-4">📊</div>
+<div class="text-center text-2xl font-bold mb-4">Evaluation</div>
+<div class="text-center opacity-80 mb-4">
 Which agent to test?
 </div>
-<div class="mt-4 text-center">
-→ Use <strong>individual stats</strong>
+<div class="text-center text-lg bg-green-100 dark:bg-green-800 p-3 rounded">
+Use <strong>individual stats</strong>
 </div>
 </div>
 
-<div class="border-2 border-purple-300 dark:border-purple-700 rounded-lg p-6">
-<div class="text-center text-4xl mb-4">⚖️</div>
-<div class="text-center text-xl font-bold mb-4">Selection</div>
-<div class="text-center text-lg">
+<div class="bg-purple-50 dark:bg-purple-900 border-2 border-purple-400 dark:border-purple-600 rounded-xl p-8 shadow-lg">
+<div class="text-center text-5xl mb-4">⚖️</div>
+<div class="text-center text-2xl font-bold mb-4">Selection</div>
+<div class="text-center opacity-80 mb-4">
 Expand or evaluate?
 </div>
-<div class="mt-4 text-center">
-→ <strong>Adaptive</strong> scheduling
+<div class="text-center text-lg bg-purple-100 dark:bg-purple-800 p-3 rounded">
+<strong>Adaptive</strong> scheduling
 </div>
 </div>
 
 </div>
 
-<div class="mt-12 text-center text-xl bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+<div class="mt-10 text-center text-xl bg-yellow-50 dark:bg-yellow-900 p-5 rounded-xl shadow-md max-w-4xl mx-auto">
 🚀 <strong>Key Innovation:</strong> Decoupled expansion from evaluation!
 </div>
 
@@ -469,20 +484,24 @@ layout: center
 
 # Result 2: Performance & Efficiency
 
-<div class="grid grid-cols-2 gap-12 mt-8">
+<div class="grid grid-cols-2 gap-16 mt-12">
 
 <div>
 
 ## 🎯 Accuracy
 
-<div class="space-y-4 mt-6 text-xl">
+<div class="space-y-6 mt-8">
 
-<div class="bg-gray-100 dark:bg-gray-800 p-4 rounded">
-<strong>SWE-Verified-60:</strong> 56.7% <span class="text-green-600">(+16.7%)</span>
+<div class="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 p-6 rounded-xl shadow-md">
+<div class="text-sm opacity-70 mb-1">SWE-Verified-60</div>
+<div class="text-3xl font-bold">56.7%</div>
+<div class="text-lg text-green-600 dark:text-green-400 font-semibold">+16.7% improvement</div>
 </div>
 
-<div class="bg-gray-100 dark:bg-gray-800 p-4 rounded">
-<strong>Polyglot:</strong> 30.5% <span class="text-green-600">(+10.2%)</span>
+<div class="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 p-6 rounded-xl shadow-md">
+<div class="text-sm opacity-70 mb-1">Polyglot</div>
+<div class="text-3xl font-bold">30.5%</div>
+<div class="text-lg text-green-600 dark:text-green-400 font-semibold">+10.2% improvement</div>
 </div>
 
 </div>
@@ -493,14 +512,18 @@ layout: center
 
 ## ⚡ Speed
 
-<div class="space-y-4 mt-6 text-xl">
+<div class="space-y-6 mt-8">
 
-<div class="bg-blue-100 dark:bg-blue-900 p-4 rounded">
-<strong>2.38× faster</strong> than DGM
+<div class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-6 rounded-xl shadow-md">
+<div class="text-sm opacity-70 mb-1">vs DGM</div>
+<div class="text-4xl font-bold text-blue-600 dark:text-blue-400">2.38×</div>
+<div class="text-lg">faster</div>
 </div>
 
-<div class="bg-blue-100 dark:bg-blue-900 p-4 rounded">
-<strong>6.86× faster</strong> on Polyglot
+<div class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-6 rounded-xl shadow-md">
+<div class="text-sm opacity-70 mb-1">Polyglot speedup</div>
+<div class="text-4xl font-bold text-blue-600 dark:text-blue-400">6.86×</div>
+<div class="text-lg">faster</div>
 </div>
 
 </div>
@@ -583,27 +606,27 @@ HGM optimized with <strong>GPT-5-mini</strong> → Evaluated with <strong>GPT-5<
 
 <div class="flex items-center justify-center h-full">
 
-<div class="grid grid-cols-2 gap-12">
+<div class="grid grid-cols-2 gap-12 max-w-5xl">
 
-<div class="border-2 border-purple-300 dark:border-purple-700 rounded-lg p-8">
-<div class="text-5xl text-center mb-4">🔄</div>
-<div class="text-2xl font-bold text-center mb-4">Self-Motivated Iteration</div>
-<div class="text-lg">
+<div class="bg-purple-50 dark:bg-purple-900 border-2 border-purple-400 dark:border-purple-600 rounded-xl p-10 shadow-lg">
+<div class="text-6xl text-center mb-6">🔄</div>
+<div class="text-2xl font-bold text-center mb-6">Self-Motivated Iteration</div>
+<div class="text-lg text-center">
 Agents perform <strong>multiple self-modifications</strong> per instruction
 </div>
-<div class="mt-4 text-center text-sm italic">
+<div class="mt-6 text-center text-base bg-purple-100 dark:bg-purple-800 p-3 rounded italic">
 → Arbitrary levels of meta-improvement!
 </div>
 </div>
 
-<div class="border-2 border-orange-300 dark:border-orange-700 rounded-lg p-8">
-<div class="text-5xl text-center mb-4">🌀</div>
-<div class="text-2xl font-bold text-center mb-4">Nested Diff Structures</div>
-<div class="text-lg">
+<div class="bg-orange-50 dark:bg-orange-900 border-2 border-orange-400 dark:border-orange-600 rounded-xl p-10 shadow-lg">
+<div class="text-6xl text-center mb-6">🌀</div>
+<div class="text-2xl font-bold text-center mb-6">Nested Diff Structures</div>
+<div class="text-lg text-center">
 Diff patches of diff patches<br/>
 Multiple levels of changes
 </div>
-<div class="mt-4 text-center text-sm italic">
+<div class="mt-6 text-center text-base bg-orange-100 dark:bg-orange-800 p-3 rounded italic">
 "Mind-bending to understand manually"
 </div>
 </div>
@@ -612,38 +635,46 @@ Multiple levels of changes
 
 </div>
 
+---
+
 # Key Contributions
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-2 gap-10 mt-10">
 
 <div class="space-y-6">
 
-<div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-🔍 <strong>Identified</strong> Metaproductivity-Performance Mismatch
+<div class="bg-blue-50 dark:bg-blue-900 p-6 rounded-xl shadow-md border-l-4 border-blue-500">
+<div class="text-3xl mb-2">🔍</div>
+<div class="text-lg"><strong>Identified</strong> Metaproductivity-Performance Mismatch</div>
 </div>
 
-<div class="bg-green-50 dark:bg-green-900 p-4 rounded-lg">
-🌿 <strong>Introduced</strong> Clade-Metaproductivity (CMP)
+<div class="bg-green-50 dark:bg-green-900 p-6 rounded-xl shadow-md border-l-4 border-green-500">
+<div class="text-3xl mb-2">🌿</div>
+<div class="text-lg"><strong>Introduced</strong> Clade-Metaproductivity (CMP)</div>
 </div>
 
-<div class="bg-purple-50 dark:bg-purple-900 p-4 rounded-lg">
-🧮 <strong>Proved</strong> Theorem 1 (CMP = Gödel Machine)
+<div class="bg-purple-50 dark:bg-purple-900 p-6 rounded-xl shadow-md border-l-4 border-purple-500">
+<div class="text-3xl mb-2">🧮</div>
+<div class="text-lg"><strong>Proved</strong> Theorem 1 (CMP = Gödel Machine)</div>
 </div>
 
 </div>
 
 <div class="space-y-6">
 
-<div class="bg-orange-50 dark:bg-orange-900 p-4 rounded-lg">
-⚡ <strong>Developed</strong> HGM Algorithm
+<div class="bg-orange-50 dark:bg-orange-900 p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+<div class="text-3xl mb-2">⚡</div>
+<div class="text-lg"><strong>Developed</strong> HGM Algorithm</div>
 </div>
 
-<div class="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
-📊 <strong>Validated</strong> 2-3× better CMP estimation
+<div class="bg-yellow-50 dark:bg-yellow-900 p-6 rounded-xl shadow-md border-l-4 border-yellow-500">
+<div class="text-3xl mb-2">📊</div>
+<div class="text-lg"><strong>Validated</strong> 2-3× better CMP estimation</div>
 </div>
 
-<div class="bg-red-50 dark:bg-red-900 p-4 rounded-lg">
-🏆 <strong>Achieved</strong> Human-level performance
+<div class="bg-red-50 dark:bg-red-900 p-6 rounded-xl shadow-md border-l-4 border-red-500">
+<div class="text-3xl mb-2">🏆</div>
+<div class="text-lg"><strong>Achieved</strong> Human-level performance</div>
 </div>
 
 </div>
@@ -675,35 +706,37 @@ Multiple levels of changes
 
 </div>
 
+---
+
 # Key Takeaways
 
-<div class="flex flex-col items-center justify-center h-full gap-8">
+<div class="flex flex-col items-center justify-center h-full gap-10">
 
-<div class="grid grid-cols-2 gap-8 text-xl max-w-5xl">
+<div class="grid grid-cols-2 gap-10 text-xl max-w-6xl">
 
-<div class="bg-red-50 dark:bg-red-900 p-6 rounded-lg">
-<div class="text-3xl mb-2">❌</div>
-<strong>Performance ≠ Metaproductivity</strong>
+<div class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900 dark:to-red-800 p-8 rounded-xl shadow-lg border-2 border-red-200 dark:border-red-700">
+<div class="text-4xl mb-3">❌</div>
+<div class="text-xl font-bold">Performance ≠ Metaproductivity</div>
 </div>
 
-<div class="bg-green-50 dark:bg-green-900 p-6 rounded-lg">
-<div class="text-3xl mb-2">✅</div>
-<strong>Lineages > Individuals</strong>
+<div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 p-8 rounded-xl shadow-lg border-2 border-green-200 dark:border-green-700">
+<div class="text-4xl mb-3">✅</div>
+<div class="text-xl font-bold">Lineages > Individuals</div>
 </div>
 
-<div class="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg">
-<div class="text-3xl mb-2">🧮</div>
-<strong>CMP Oracle = Gödel Machine</strong>
+<div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-8 rounded-xl shadow-lg border-2 border-blue-200 dark:border-blue-700">
+<div class="text-4xl mb-3">🧮</div>
+<div class="text-xl font-bold">CMP Oracle = Gödel Machine</div>
 </div>
 
-<div class="bg-purple-50 dark:bg-purple-900 p-6 rounded-lg">
-<div class="text-3xl mb-2">🏆</div>
-<strong>Human-Level Performance</strong>
+<div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 p-8 rounded-xl shadow-lg border-2 border-purple-200 dark:border-purple-700">
+<div class="text-4xl mb-3">🏆</div>
+<div class="text-xl font-bold">Human-Level Performance</div>
 </div>
 
 </div>
 
-<div class="text-3xl text-center bg-yellow-50 dark:bg-yellow-900 p-8 rounded-lg max-w-4xl">
+<div class="text-2xl text-center bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900 dark:to-orange-900 p-8 rounded-xl shadow-xl max-w-5xl border-2 border-yellow-300 dark:border-yellow-700">
 💡 <strong>Paradigm Shift:</strong> Focus on capacity to <strong>keep improving</strong>
 </div>
 
