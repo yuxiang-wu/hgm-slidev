@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@slidev/cli": "^0.49.0",
-    "@slidev/theme-default": "latest"
+    "@slidev/theme-default": "latest",
+    "@traptitech/markdown-it-katex": "^3.6.0",
+    "katex": "^0.16.25"
   },
   "devDependencies": {
     "playwright-chromium": "^1.40.0"
