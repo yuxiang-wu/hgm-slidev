@@ -66,4 +66,21 @@ The presentation follows a color coding scheme:
 - The presentation is currently configured for `auto` color schema (supports both light and dark modes)
 - Default theme is used; customization happens through Tailwind utility classes
 - Images are stored locally in public/images/ and referenced with `/images/` paths
-- The presentation includes mathematical formulas (would need KaTeX support if editing)
+- The presentation includes mathematical formulas using KaTeX (configured in frontmatter with custom macros)
+
+## Mathematical Notation
+
+KaTeX is enabled with custom macros defined in the frontmatter:
+- `\argmax` - argument max operator
+- `\E` - expectation symbol (ℝ)
+
+When adding new math, use inline `$...$` or display `$$...$$` syntax. Complex formulas are already configured to render properly.
+
+## Making Changes
+
+When editing slides:
+- Each slide is separated by `---`
+- Use `v-click` for progressive reveal animations
+- Layouts: `default`, `center`, or custom grid layouts
+- Mermaid diagrams are supported for flowcharts/graphs
+- Keep consistent with the existing color-coded theme (red=problems, blue=theory, green=solutions, purple=advanced, yellow=insights)
